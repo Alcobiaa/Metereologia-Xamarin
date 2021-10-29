@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Meteo.Prism.Views.AboutUsPage"
+             xmlns:i18n="clr-namespace:Meteo.Prism.Helpers"
+             Title="{Binding Title}">
+
+    <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+
+        <Image Source="aboutus" WidthRequest="200" HeightRequest="200"></Image>
+
+        <Grid Padding="80,80">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                    Text="{i18n:Translate Author}" />
+
+            <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    FontAttributes="Italic"
+                    TextColor="Black"
+                    Text="Gonçalo Alcobia"/>
+
+            <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                    Text="{i18n:Translate Version}"/>
+
+            <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    FontAttributes="Italic"
+                    TextColor="Black"
+                    Text="1.0.0"/>
+
+            <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                    Text="{i18n:Translate Date}"/>
+
+            <Label
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    FontAttributes="Italic"
+                    TextColor="Black"
+                    Text="03-11-2021"/>
+
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

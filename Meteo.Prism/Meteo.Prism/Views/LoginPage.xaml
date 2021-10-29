@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Meteo.Prism.Views.LoginPage"
+             xmlns:i18n="clr-namespace:Meteo.Prism.Helpers"
+             Title="{Binding Title}">
+
+    <StackLayout Padding="10">
+        <Label Text="{i18n:Translate Username}"/>
+        <Entry 
+            Keyboard="Email" 
+            Placeholder="Enter your username" 
+            Text="{Binding Username}"/>
+        <Label Text="{i18n:Translate Password}"/>
+        <Entry 
+            IsPassword="True" 
+            Placeholder="Enter your password" 
+            Text="{Binding Password}"/>
+        <Label/>
+        <Label/>
+        <Image HeightRequest="85" Source="Meteo" />
+        <ActivityIndicator
+            IsRunning="{Binding IsRunning}"
+            VerticalOptions="CenterAndExpand"/>
+        
+        <Button
+            Command="{Binding LoginCommand}"
+            Text="{i18n:Translate Login}"/>
+
+        <Button
+            Command="{Binding RegisterCommand}"
+            Text="{i18n:Translate Register}"/>
+        
+    </StackLayout>
+
+</ContentPage>
