@@ -1,11 +1,9 @@
 ﻿using Meteo.Prism.Helpers;
 using Meteo.Prism.ItemViewModels;
 using Meteo.Prism.Models;
-using Meteo.Prism.Resources;
 using Meteo.Prism.Views;
 using Prism.Commands;
 using Prism.Navigation;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;

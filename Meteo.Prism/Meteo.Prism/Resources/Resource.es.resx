@@ -151,4 +151,7 @@
   <data name="Date" xml:space="preserve">
     <value>Fecha</value>
   </data>
+  <data name="Update" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
 </root>

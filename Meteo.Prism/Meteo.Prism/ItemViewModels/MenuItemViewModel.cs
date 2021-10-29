@@ -1,10 +1,7 @@
-﻿using Meteo.Prism.Resources;
+﻿using Meteo.Prism.Models;
 using Meteo.Prism.Views;
 using Prism.Commands;
 using Prism.Navigation;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Meteo.Prism.ItemViewModels
 {

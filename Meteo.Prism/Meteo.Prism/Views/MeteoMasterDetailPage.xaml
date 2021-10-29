@@ -8,7 +8,6 @@
     <MasterDetailPage.Master>
         <ContentPage
             Title="Menu"
-            BackgroundColor="{StaticResource ColorSecondary}"
             IconImageSource="ic_action_menu">
 
             <ContentPage.Padding>

@@ -1,4 +1,8 @@
-﻿namespace Meteo.Prism.Resources
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Meteo.Prism.Models
 {
     public class Menu
     {

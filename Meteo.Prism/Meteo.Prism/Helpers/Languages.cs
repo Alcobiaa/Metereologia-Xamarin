@@ -52,5 +52,7 @@ namespace Meteo.Prism.Helpers
         public static string Version => Resource.Version;
 
         public static string Author => Resource.Author;
+
+        public static string Update => Resource.Update;
     }
 }

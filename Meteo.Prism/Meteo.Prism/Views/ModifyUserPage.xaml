@@ -3,6 +3,57 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="Meteo.Prism.Views.ModifyUserPage">
-  
+             x:Class="Meteo.Prism.Views.ModifyUserPage"
+             xmlns:i18n="clr-namespace:Meteo.Prism.Helpers"
+             Title="{Binding Title}">
+
+    <StackLayout Padding="10">
+        <Label Text="{i18n:Translate FirstName}"/>
+        <Entry 
+            Keyboard="Text" 
+            Placeholder="Enter your first name" 
+            Text="{Binding FirstName}"/>
+        
+        
+        <Label Text="{i18n:Translate LastName}"/>
+        <Entry 
+            Keyboard="Text" 
+            Placeholder="Enter your last name"
+            Text="{Binding LastName}"/>
+        
+        
+        <Label Text="{i18n:Translate Address}"/>
+        <Entry
+            Keyboard="Text"
+            Placeholder="Enter you address"
+            Text="{Binding Address}"/>
+        
+        
+        <Label Text="{i18n:Translate FiscalNumber}"/>
+        <Entry
+            Keyboard="Text"
+            Placeholder="Enter your fiscal number"
+            Text="{Binding FiscalNumber}"/>
+        
+        
+        <Label Text="{i18n:Translate CitizenCardNumber}"/>
+        <Entry
+            Keyboard="Text"
+            Placeholder="Enter your citizen card number"
+            Text="{Binding CitizenCardNumber}"/>
+        
+        
+        <Label Text="{i18n:Translate Age}"/>
+        <Entry
+            Keyboard="Text"
+            Placeholder="Enter your age"
+            Text="{Binding Age}"/>
+       
+        
+        
+        <Button
+            Command="{Binding ModifyUserCommand}"
+            Text="{i18n:Translate Update}"/>
+    </StackLayout>
+
 </ContentPage>
