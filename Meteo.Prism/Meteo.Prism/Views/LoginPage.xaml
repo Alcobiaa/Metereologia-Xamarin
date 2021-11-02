@@ -5,6 +5,7 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Meteo.Prism.Views.LoginPage"
              xmlns:i18n="clr-namespace:Meteo.Prism.Helpers"
+             BackgroundColor="{StaticResource ColorBackground}"
              Title="{Binding Title}">
 
     <StackLayout Padding="10">
@@ -27,10 +28,12 @@
         
         <Button
             Command="{Binding LoginCommand}"
+            CornerRadius="30"
             Text="{i18n:Translate Login}"/>
 
         <Button
             Command="{Binding RegisterCommand}"
+            CornerRadius="30"
             Text="{i18n:Translate Register}"/>
         
     </StackLayout>

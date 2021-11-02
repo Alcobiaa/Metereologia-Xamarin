@@ -6,6 +6,7 @@
              x:Class="Meteo.Prism.Views.MeteoPage"
              xmlns:i18n="clr-namespace:Meteo.Prism.Helpers"
              xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+             BackgroundColor="{StaticResource ColorBackground}"
              Title="{Binding Title}">
 
     <AbsoluteLayout>
@@ -62,10 +63,10 @@
             AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
             AbsoluteLayout.LayoutFlags="All"
             AnimationType="Gear"
-            BackgroundColor="#73221A"
+            BackgroundColor="{StaticResource ColorAccent}"
             HorizontalOptions="Center"
             IsBusy="{Binding IsRunning}"
-            TextColor="#FFFFFF"
+            TextColor="{StaticResource ColorFontInverse}"
             VerticalOptions="Center"
             ViewBoxHeight="80"
             ViewBoxWidth="80" />

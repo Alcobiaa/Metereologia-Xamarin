@@ -8,6 +8,7 @@
     <MasterDetailPage.Master>
         <ContentPage
             Title="Menu"
+            BackgroundColor="{StaticResource ColorSecondary}"
             IconImageSource="ic_action_menu">
 
             <ContentPage.Padding>
@@ -22,6 +23,7 @@
                 <Label/>
                 <Button
                      Text="Logout"
+                     CornerRadius="30"
                      Command="{Binding LogoutCommand}"/>
                 <Label/>
                 <ListView

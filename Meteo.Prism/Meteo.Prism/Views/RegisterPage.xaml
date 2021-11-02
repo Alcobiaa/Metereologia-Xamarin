@@ -5,6 +5,7 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Meteo.Prism.Views.RegisterPage"
              xmlns:i18n="clr-namespace:Meteo.Prism.Helpers"
+             BackgroundColor="{StaticResource ColorBackground}"
              Title="{Binding Title}">
 
     <ScrollView>
@@ -57,14 +58,9 @@
             Placeholder="Enter your age"
             Text="{Binding Age}"/>
 
-            <!--<Label Text="Role"/>
-            <Entry
-            Keyboard="Text"
-            Placeholder="Enter your role"
-            Text="{Binding Role}"/>-->
-
             <Button
                 Command="{Binding RegisterCommand}"
+                CornerRadius="30"
                 IsEnabled="{Binding IsEnabled}"
                 Text="{i18n:Translate Register}"/>
         </StackLayout>

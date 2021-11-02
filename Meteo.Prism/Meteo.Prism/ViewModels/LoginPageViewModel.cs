@@ -3,6 +3,8 @@ using Meteo.Prism.Services;
 using Meteo.Prism.Views;
 using Prism.Commands;
 using Prism.Navigation;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace Meteo.Prism.ViewModels
 {
@@ -17,6 +19,15 @@ namespace Meteo.Prism.ViewModels
         {
             Title = Languages.Login;
             _apiService = apiService;
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    await App.Current.MainPage.DisplayAlert(Languages.Error, Languages.ConnectionError, Languages.Accept);
+                });
+                return;
+            }
         }
 
         public DelegateCommand LoginCommand => _loginCommand ?? (_loginCommand = new DelegateCommand(Login));

@@ -5,6 +5,7 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Meteo.Prism.Views.MeteoDetailPage"
              xmlns:i18n="clr-namespace:Meteo.Prism.Helpers"
+             BackgroundColor="{StaticResource ColorBackground}"
              Title="{Binding Title}">
     
     <ScrollView>
