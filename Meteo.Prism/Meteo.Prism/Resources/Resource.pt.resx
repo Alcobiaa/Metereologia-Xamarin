@@ -169,4 +169,34 @@
   <data name="ConnectionError" xml:space="preserve">
     <value>Erro de Conexão</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="FeelsLike" xml:space="preserve">
+    <value>Sensação térmica</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="TemperatureMin" xml:space="preserve">
+    <value>Temperatura Minima</value>
+  </data>
+  <data name="TemperatureMax" xml:space="preserve">
+    <value>Temperatura máxima</value>
+  </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="Humidity" xml:space="preserve">
+    <value>Humidade</value>
+  </data>
+  <data name="WindSpeed" xml:space="preserve">
+    <value>Velocidade do vento</value>
+  </data>
+  <data name="Cloudiness" xml:space="preserve">
+    <value>Nebulosidade</value>
+  </data>
 </root>

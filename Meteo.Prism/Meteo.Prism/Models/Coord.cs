@@ -2,8 +2,8 @@
 {
     public class Coord
     {
-        public string Longitude { get; set; }
+        public string Lon { get; set; }
 
-        public string Latitude { get; set; }
+        public string Lat { get; set; }
     }
 }

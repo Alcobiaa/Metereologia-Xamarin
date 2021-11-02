@@ -4,11 +4,11 @@
     {
         public double Temp { get; set; }
 
-        public double FeelsLike { get; set; }
+        public double Feels_Like { get; set; }
 
-        public double TempMin { get; set; }
+        public double Temp_Min { get; set; }
 
-        public double TempMax { get; set; }
+        public double Temp_Max { get; set; }
 
         public double Pressure { get; set; }
 

@@ -21,7 +21,7 @@ namespace Meteo.Prism.ItemViewModels
         {
             NavigationParameters parameters = new NavigationParameters
             {
-                {"wheather", this }
+                {"weather", this }
             };
 
             await _navigationService.NavigateAsync(nameof(MeteoDetailPage), parameters);

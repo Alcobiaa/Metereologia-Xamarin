@@ -3,6 +3,135 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="Meteo.Prism.Views.MeteoDetailPage">
-  
+             x:Class="Meteo.Prism.Views.MeteoDetailPage"
+             xmlns:i18n="clr-namespace:Meteo.Prism.Helpers"
+             Title="{Binding Title}">
+    
+    <ScrollView>
+        <StackLayout Padding="10">
+            <Image
+                Source="{Binding Weather.Weather[0].Icon, StringFormat='https://openweathermap.org/img/wn/{0}@4x.png'}"
+                WidthRequest="400" />
+            <Grid Padding="10,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    Text="{i18n:Translate Name}" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Text="{Binding Weather.Name}" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    Text="{i18n:Translate Description}" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Text="{Binding Weather.Weather[0].Description}" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    Text="{i18n:Translate Longitude}" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Text="{Binding Weather.Coord.Lon}" />
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    Text="{i18n:Translate Latitude}" />
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Text="{Binding Weather.Coord.Lat}" />
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    Text="{i18n:Translate Temperature}" />
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Text="{Binding Weather.Main.Temp, StringFormat='{0}º'}" />
+                <Label
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    Text="{i18n:Translate FeelsLike}" />
+                <Label
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Text="{Binding Weather.Main.Feels_Like, StringFormat='{0}º'}" />
+                <Label
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    Text="{i18n:Translate TemperatureMin}" />
+                <Label
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Text="{Binding Weather.Main.Temp_Min, StringFormat='{0}º'}" />
+                <Label
+                    Grid.Row="7"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    Text="{i18n:Translate TemperatureMax}" />
+                <Label
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    Text="{Binding Weather.Main.Temp_Max, StringFormat='{0}º'}" />
+                <Label
+                    Grid.Row="8"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    Text="{i18n:Translate Humidity}"/>
+                <Label
+                    Grid.Row="8"
+                    Grid.Column="1"
+                    Text="{Binding Weather.Main.Humidity, StringFormat='{0}%'}" />
+                <Label
+                    Grid.Row="9"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    Text="{i18n:Translate WindSpeed}" />
+                <Label
+                    Grid.Row="9"
+                    Grid.Column="1"
+                    Text="{Binding Weather.Wind.Speed, StringFormat='{0}m/s'}" />
+                <Label
+                    Grid.Row="10"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    Text="{i18n:Translate Cloudiness}"/>
+                <Label
+                    Grid.Row="10"
+                    Grid.Column="1"
+                    Text="{Binding Weather.Clouds.All, StringFormat='{0}%'}" />
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+    
 </ContentPage>

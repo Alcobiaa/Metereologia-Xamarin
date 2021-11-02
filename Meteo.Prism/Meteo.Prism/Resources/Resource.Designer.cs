@@ -115,6 +115,15 @@ namespace Meteo.Prism.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cloudiness.
+        /// </summary>
+        internal static string Cloudiness {
+            get {
+                return ResourceManager.GetString("Cloudiness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Connection Error.
         /// </summary>
         internal static string ConnectionError {
@@ -133,11 +142,29 @@ namespace Meteo.Prism.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        internal static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         internal static string Error {
             get {
                 return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feels Like.
+        /// </summary>
+        internal static string FeelsLike {
+            get {
+                return ResourceManager.GetString("FeelsLike", resourceCulture);
             }
         }
         
@@ -160,11 +187,29 @@ namespace Meteo.Prism.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Humidity.
+        /// </summary>
+        internal static string Humidity {
+            get {
+                return ResourceManager.GetString("Humidity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Last Name.
         /// </summary>
         internal static string LastName {
             get {
                 return ResourceManager.GetString("LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Latitude.
+        /// </summary>
+        internal static string Latitude {
+            get {
+                return ResourceManager.GetString("Latitude", resourceCulture);
             }
         }
         
@@ -187,6 +232,15 @@ namespace Meteo.Prism.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Longitude.
+        /// </summary>
+        internal static string Longitude {
+            get {
+                return ResourceManager.GetString("Longitude", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Meteorology.
         /// </summary>
         internal static string Meteorology {
@@ -201,6 +255,15 @@ namespace Meteo.Prism.Resources {
         internal static string ModifyUser {
             get {
                 return ResourceManager.GetString("ModifyUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
             }
         }
         
@@ -241,6 +304,24 @@ namespace Meteo.Prism.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Maximum Temperature.
+        /// </summary>
+        internal static string TemperatureMax {
+            get {
+                return ResourceManager.GetString("TemperatureMax", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minimum Temperature.
+        /// </summary>
+        internal static string TemperatureMin {
+            get {
+                return ResourceManager.GetString("TemperatureMin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update.
         /// </summary>
         internal static string Update {
@@ -273,6 +354,15 @@ namespace Meteo.Prism.Resources {
         internal static string Weather {
             get {
                 return ResourceManager.GetString("Weather", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wind Speed.
+        /// </summary>
+        internal static string WindSpeed {
+            get {
+                return ResourceManager.GetString("WindSpeed", resourceCulture);
             }
         }
     }

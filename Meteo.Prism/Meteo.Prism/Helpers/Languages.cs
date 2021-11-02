@@ -64,5 +64,26 @@ namespace Meteo.Prism.Helpers
         public static string Loading => Resource.Loading;
 
         public static string ConnectionError => Resource.ConnectionError;
+
+        public static string Name => Resource.Name;
+
+        public static string FeelsLike => Resource.FeelsLike;
+
+        public static string Description => Resource.Description;
+
+        public static string TemperatureMax => Resource.TemperatureMax;
+
+        public static string TemperatureMin => Resource.TemperatureMin;
+
+        public static string Longitude => Resource.Longitude;
+
+        public static string Latitude => Resource.Latitude;
+
+        public static string Humidity => Resource.Humidity;
+
+        public static string WindSpeed => Resource.WindSpeed;
+
+        public static string Cloudiness => Resource.Cloudiness;
+
     }
 }

@@ -4,7 +4,6 @@ using Meteo.Prism.Models;
 using Meteo.Prism.Services;
 using Prism.Commands;
 using Prism.Navigation;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;

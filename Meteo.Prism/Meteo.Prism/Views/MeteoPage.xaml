@@ -46,7 +46,7 @@
                                     <Label.FormattedText>
                                         <FormattedString>
                                             <Span FontAttributes="Bold" Text="{i18n:Translate Temperature}" />
-                                            <Span Text="{Binding Main.Temp, StringFormat=':'}" />
+                                            <Span Text="{Binding Main.Temp, StringFormat=': {0}º'}" />
                                         </FormattedString>
                                     </Label.FormattedText>
                                 </Label>
