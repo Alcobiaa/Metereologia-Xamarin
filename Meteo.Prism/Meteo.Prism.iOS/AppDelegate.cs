@@ -1,6 +1,7 @@
 ﻿using Foundation;
 using Prism;
 using Prism.Ioc;
+using Syncfusion.SfBusyIndicator.XForms.iOS;
 using UIKit;
 
 
@@ -23,7 +24,6 @@ namespace Meteo.Prism.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App(new iOSInitializer()));
-
             return base.FinishedLaunching(app, options);
         }
     }

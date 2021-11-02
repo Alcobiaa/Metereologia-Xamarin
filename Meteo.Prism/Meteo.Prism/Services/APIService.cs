@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Meteo.Prism.Services
@@ -27,7 +26,7 @@ namespace Meteo.Prism.Services
 
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            var response = await client.PostAsync("https://imobilar2021.azurewebsites.net/api/users", content);
+            var response = await client.PostAsync("https://imobilar.azurewebsites.net/api/users", content);
 
             return response.IsSuccessStatusCode;
         }
@@ -55,7 +54,7 @@ namespace Meteo.Prism.Services
 
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            var response = await client.PostAsync("https://imobilar2021.azurewebsites.net/api/Register", content);
+            var response = await client.PostAsync("https://imobilar.azurewebsites.net/api/Register", content);
 
             return response.IsSuccessStatusCode;
         }
@@ -64,7 +63,7 @@ namespace Meteo.Prism.Services
         {
             var client = new HttpClient();
 
-            var response = await client.GetAsync("https://imobilar2021.azurewebsites.net/api/modifyuser" + $"?username={username}");
+            var response = await client.GetAsync("https://imobilar.azurewebsites.net/api/modifyuser" + $"?username={username}");
 
             if (response.IsSuccessStatusCode)
             {
@@ -114,7 +113,7 @@ namespace Meteo.Prism.Services
 
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            var response = await client.PutAsync("https://imobilar2021.azurewebsites.net/api/modifyuser", content);
+            var response = await client.PutAsync("https://imobilar.azurewebsites.net/api/modifyuser", content);
 
             if (response.IsSuccessStatusCode)
             {
@@ -133,6 +132,43 @@ namespace Meteo.Prism.Services
             }
 
             return null;
+        }
+
+        public async Task<Response> GetWeather<T>(string location)
+        {
+            try
+            {
+                var url = string.Format("http://api.openweathermap.org/data/2.5/weather?q={0}&units=metric&appid=f1bba1c9c820b3ebd8869890ed55bb88", location);
+
+                var client = new HttpClient();
+                var response = await client.GetAsync(url);
+                var result = await response.Content.ReadAsStringAsync();
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    return new Response
+                    {
+                        IsSuccess = false,
+                        Message = result,
+                    };
+                }
+
+                var list = JsonConvert.DeserializeObject<WeatherResponse>(result);
+
+                return new Response
+                {
+                    IsSuccess = true,
+                    Result = list
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Response
+                {
+                    IsSuccess = false,
+                    Message = ex.Message
+                };
+            }
         }
     }
 }

@@ -12,5 +12,7 @@ namespace Meteo.Prism.Services
         Task<ChangeUser> GetUser(string username);
 
         Task<ChangeUser> UserPropertiesChange(string firstName, string lastName, string address, int fiscalNumber, int citizenCardNumber, int age);
+
+        Task<Response> GetWeather<T>(string location);
     }
 }

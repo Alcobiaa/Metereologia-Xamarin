@@ -154,4 +154,19 @@
   <data name="Update" xml:space="preserve">
     <value>Actualizar</value>
   </data>
+  <data name="SearchWheather" xml:space="preserve">
+    <value>Busca el clima</value>
+  </data>
+  <data name="Weather" xml:space="preserve">
+    <value>Clima</value>
+  </data>
+  <data name="Temperature" xml:space="preserve">
+    <value>Temperatura</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Cargando...</value>
+  </data>
+  <data name="ConnectionError" xml:space="preserve">
+    <value>Error de Conexión</value>
+  </data>
 </root>

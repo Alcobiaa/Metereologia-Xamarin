@@ -3,11 +3,73 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="Meteo.Prism.Views.MeteoPage">
+             x:Class="Meteo.Prism.Views.MeteoPage"
+             xmlns:i18n="clr-namespace:Meteo.Prism.Helpers"
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+             Title="{Binding Title}">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
-    </StackLayout>
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All"
+                     Padding="5">
+            <SearchBar Placeholder="{i18n:Translate SearchWheather}"
+                       SearchCommand="{Binding SearchCommand}"
+                       Text="{Binding Search}"/>
+            <CollectionView ItemsSource="{Binding Weather}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SelectWheatherCommand}"/>
+                            </Grid.GestureRecognizers>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                    Source="{Binding Weather[0].Icon, StringFormat='https://openweathermap.org/img/wn/{0}.png'}"
+                                    WidthRequest="100" />
+                            <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="Medium"
+                                    LineBreakMode="TailTruncation"
+                                    Text="{Binding Name}" />
+
+                                <Label
+                                    FontAttributes="Italic"
+                                    VerticalOptions="End">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span FontAttributes="Bold" Text="{i18n:Translate Temperature}" />
+                                            <Span Text="{Binding Main.Temp, StringFormat=':'}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+                            <Image Grid.Column="2" Source="ic_more_vert" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+        <busyindicator:SfBusyIndicator
+            Title="{i18n:Translate Loading}"
+            AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+            AbsoluteLayout.LayoutFlags="All"
+            AnimationType="Gear"
+            BackgroundColor="#73221A"
+            HorizontalOptions="Center"
+            IsBusy="{Binding IsRunning}"
+            TextColor="#FFFFFF"
+            VerticalOptions="Center"
+            ViewBoxHeight="80"
+            ViewBoxWidth="80" />
+    </AbsoluteLayout>
 
 
 </ContentPage>

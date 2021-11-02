@@ -54,5 +54,15 @@ namespace Meteo.Prism.Helpers
         public static string Author => Resource.Author;
 
         public static string Update => Resource.Update;
+
+        public static string SearchWheather => Resource.SearchWheather;
+
+        public static string Weather => Resource.Weather;
+
+        public static string Temperature => Resource.Temperature;
+
+        public static string Loading => Resource.Loading;
+
+        public static string ConnectionError => Resource.ConnectionError;
     }
 }
